@@ -9,6 +9,7 @@ pylint = "*"
 [packages]
 flask = "*"
 pyorbital = "*"
+beautifulsoup4 = "*"
 
 [requires]
 python_version = "3.6"
