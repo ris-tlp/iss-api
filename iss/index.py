@@ -1,8 +1,13 @@
 from flask import Flask, jsonify, request
 from .nasa_scrape import scrape
+from .convertdata import parse
 
 app = Flask(__name__)
 
 @app.route("/")
 def tle_data():
-    return scrape()
+    x = parse(scrape())
+    # return f'{x} \n {y}'
+    # return scrape()
+    return x
+

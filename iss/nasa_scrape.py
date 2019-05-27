@@ -9,10 +9,10 @@ def scrape():
     html_list = str(soup.pre).split()
     tle_list = []
 
-    for i, value in enumerate(html_list):
-        if(value == "SET"):
+    for i, word in enumerate(html_list):
+        if(word == "SET"):
             tle_list = html_list[i+2:i+20]
             break
 
-    tle_data = " ".join(tle_list)
-    return tle_data
+    # tle_data = " ".join(tle_list)
+    return tle_list
