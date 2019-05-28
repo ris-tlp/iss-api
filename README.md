@@ -6,3 +6,6 @@
 * Routes in one file
 * Scraping and shit in another file
 * Use CI too
+
+
+sudo docker build -t iss-api .

@@ -8,7 +8,6 @@ pylint = "*"
 
 [packages]
 flask = "*"
-pyorbital = "*"
 beautifulsoup4 = "*"
 ephem = "*"
 
