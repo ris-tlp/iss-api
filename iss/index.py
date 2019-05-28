@@ -6,7 +6,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def tle_data():
-    x = parse(scrape())
+    # x = parse(scrape())
+    tle_list = scrape()
+    x = parse(tle_list)
     # return f'{x} \n {y}'
     # return scrape()
     return x

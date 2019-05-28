@@ -10,6 +10,7 @@ pylint = "*"
 flask = "*"
 pyorbital = "*"
 beautifulsoup4 = "*"
+ephem = "*"
 
 [requires]
 python_version = "3.6"

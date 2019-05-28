@@ -3,16 +3,12 @@ from bs4 import BeautifulSoup
 
 def scrape():
     page = urllib.request.urlopen(
-        "https://spaceflight.nasa.gov/realdata/sightings/SSapplications/Post/JavaSSOP/orbit/ISS/SVPOST.html")
+        "http://celestrak.com/NORAD/elements/stations.txt")
 
-    soup = BeautifulSoup(page, "html.parser")
-    html_list = str(soup.pre).split()
+    data = str(page.read())
+    html_list = data.split("\\n")
     tle_list = []
-
-    for i, word in enumerate(html_list):
-        if(word == "SET"):
-            tle_list = html_list[i+2:i+20]
-            break
-
-    # tle_data = " ".join(tle_list)
+    tle_list.append(html_list[1].split("\\r")[0])
+    tle_list.append(html_list[2].split("\\r")[0])
+        
     return tle_list
