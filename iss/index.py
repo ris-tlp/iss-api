@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 from .tle_scrape import scrape
 from .convertdata import parse
 
@@ -10,3 +10,6 @@ def tle_data():
     data = parse(tle_list)
     return jsonify(data)
 
+@app.errorhandler(404)
+def wrong_route(error):
+    return make_response(jsonify({'Error': 'Not found'}), 404)
