@@ -1,8 +1,8 @@
 # iss-api
 
 ## Instructions
-`python3 -m pip install pipenv`
-`pipenv --three` to create a python3 virtual environment
+`python3 -m pip install pipenv`  
+`pipenv --three` to create a python3 virtual environment  
 `pipenv install` to install dependencies  
 `./bootstrap.sh` to start
 
