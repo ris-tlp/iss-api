@@ -1,13 +1,14 @@
 # iss-api
 
-#TODO
+## Instructions
+`python3 -m pip install`  
+`pipfile install` to install dependencies  
+`./bootstrap.sh` to start
 
-##Structure
-* Routes in one file
-* Scraping and shit in another file
-* travis
-
-
-`sudo docker build -t iss-api .`  
-`sudo docker run --name iss-api -d -p 5000:5000 iss-api`  
-`curl http://localhost:5000/`
+`curl http://0.0.0.0:5000/` returns
+  
+```{
+  "Latitude": 51.799, 
+  "Longitude": 164.088
+}
+```
