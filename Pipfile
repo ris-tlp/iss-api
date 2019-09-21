@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pylint = "*"
+pep8 = "*"
 
 [packages]
 flask = "*"
@@ -12,4 +12,4 @@ beautifulsoup4 = "*"
 pyorbital = "*"
 
 [requires]
-python_version = ">=3.6"
+python_version = "3.7"

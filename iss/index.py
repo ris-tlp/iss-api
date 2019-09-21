@@ -1,14 +1,14 @@
 from flask import Flask, jsonify, request, make_response
-from .tle_scrape import scrape
-from .convertdata import parse
+from parse_data import scrape, parse
+from iss import app
 
-app = Flask(__name__)
 
 @app.route("/")
 def tle_data():
     tle_list = scrape()
     data = parse(tle_list)
     return jsonify(data)
+
 
 @app.errorhandler(404)
 def wrong_route(error):
