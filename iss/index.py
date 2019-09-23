@@ -5,9 +5,9 @@ from iss import app
 
 @app.route("/")
 def tle_data():
-    tle_list = scrape()
-    data = parse(tle_list)
-    return jsonify(data)
+    tle = scrape()
+    coordinates = parse(tle)
+    return jsonify(coordinates)
 
 
 @app.errorhandler(404)

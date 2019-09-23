@@ -17,15 +17,15 @@ def scrape() -> list:
     return tle
 
 
-def parse(tle_list) -> dict:
-    line1 = str(tle_list[0])
-    line2 = str(tle_list[1])
+def parse(tle: list) -> dict:
+    line1 = str(tle[0])
+    line2 = str(tle[1])
     orb = Orbital("ISS (ZARYA)", line1=line1, line2=line2)
     data_set = orb.get_lonlatalt(datetime.datetime.utcnow())
 
-    data = {
-        "Longitude": round(data_set[0], 3),
-        "Latitude": round(data_set[1], 3)
+    coordinates = {
+        "Longitude": round(data_set[0], 2),
+        "Latitude": round(data_set[1], 2)
     }
 
-    return data
+    return coordinates
