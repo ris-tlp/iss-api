@@ -1,3 +1,5 @@
+![TravisBuild](https://travis-ci.org/ris-tlp/iss-api.svg?branch=master)
+
 # iss-api  
 A simple RESTful API service that scrapes NORAD's Two Line Element (TLE) data sets to return a JSON object containing the current latitude/longitude of the Internation Space Station.
 
