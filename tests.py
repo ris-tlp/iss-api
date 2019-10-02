@@ -1,6 +1,7 @@
 import unittest
 from iss.index import app
 
+
 class RouteTests(unittest.TestCase):
 
     def setUp(self):
@@ -13,8 +14,8 @@ class RouteTests(unittest.TestCase):
     def test_home_status_code(self):
         result = self.app.get('/')
         self.assertEqual(result.status_code, 200)
-    
-    def test_random_status_code(self):
+
+    def test_404_status_code(self):
         result = self.app.get('/random')
         self.assertEqual(result.status_code, 404)
 
